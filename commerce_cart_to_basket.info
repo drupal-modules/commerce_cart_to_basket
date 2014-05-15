@@ -1,1 +1,6 @@
 name = Commerce Cart to Basket
+description = Changes shopping "cart" to "basket", including page URLs.
+package = Commerce (Contrib)
+core = 7.x
+dependencies[] = commerce_cart
+name = Commerce Cart to Basket
