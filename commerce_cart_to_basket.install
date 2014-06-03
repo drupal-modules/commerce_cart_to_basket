@@ -47,7 +47,7 @@ function commerce_cart_to_basket_uninstall() {
 /**
  * Private function to provide list of string overrides.
  *
- * TODO: add more. Search regexp is:  t\('.*?cart
+ * TODO: add more. Search regexp is: t\('.*?cart
  */
 function _cart_to_basket_strings() {
   return array(
@@ -62,6 +62,8 @@ function _cart_to_basket_strings() {
     'Update cart' => 'Update basket',
     'View cart' => 'View basket',
     'Shopping cart' => 'Shopping basket',
+    'Shopping cart (1 item)' => 'Shopping basket (1 item)',
+    'Shopping cart (@count items)' => 'Shopping basket (@count items)',
     /* admin items follow */
     'Cart summary' => 'Basket summary',
     'Cart actions' => 'Basket actions',
