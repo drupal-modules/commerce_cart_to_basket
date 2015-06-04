@@ -17,7 +17,7 @@ function commerce_cart_to_basket_install() {
     'weight' => $weight + 1))->condition('name', 'commerce_cart_to_basket', '=')->execute();
 
   // Get any existing overrides from the database for default language.
-  $custom_strings = variable_get('locale_custom_strings_en', array());
+  $custom_strings = variable_get('locale_custom_strings_en', array('' => array()));
 
   // Add new string overrides with default empty context.
   $custom_strings[''] += _cart_to_basket_strings();
@@ -30,7 +30,7 @@ function commerce_cart_to_basket_install() {
  */
 function commerce_cart_to_basket_uninstall() {
   // Get string overrides from the database for default language.
-  $custom_strings = variable_get('locale_custom_strings_en', array());
+  $custom_strings = variable_get('locale_custom_strings_en', array('' => array()));
 
   $cart_to_basket_strings = _cart_to_basket_strings();
 
