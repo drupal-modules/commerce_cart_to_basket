@@ -20,7 +20,7 @@ function commerce_cart_to_basket_install() {
   $custom_strings = variable_get('locale_custom_strings_en', array());
 
   // Add new string overrides with default empty context.
-  if (is_array($custom_strings[''])) {
+  if (isset($custom_strings['']) and is_array($custom_strings[''])) {
     $custom_strings[''] += _cart_to_basket_strings();
   }
   else {
@@ -38,7 +38,7 @@ function commerce_cart_to_basket_uninstall() {
   $custom_strings = variable_get('locale_custom_strings_en', array());
 
   // Remove all that match our overrides.
-  if (is_array($custom_strings[''])) {
+  if (isset($custom_strings['']) and is_array($custom_strings[''])) {
     $cart_to_basket_strings = _cart_to_basket_strings();
     foreach ($custom_strings[''] as $original => $override) {
       if ($cart_to_basket_strings[$original] == $override) {
