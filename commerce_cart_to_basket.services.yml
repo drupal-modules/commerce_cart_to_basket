@@ -1,0 +1,9 @@
+services:
+  commerce_cart_to_basket.path_processor:
+    class: Drupal\commerce_cart_to_basket\PathProcessor\OutboundPathProcessor
+    tags:
+      - {name: path_processor_outbound}
+  commerce_cart_to_basket.string_translator:
+    class: Drupal\commerce_cart_to_basket\Translation
+    tags:
+      - {name: string_translator, priority: 10}
