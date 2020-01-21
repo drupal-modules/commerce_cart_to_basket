@@ -15,7 +15,7 @@ class OutboundPathProcessor implements OutboundPathProcessorInterface {
   public function processOutbound($path, &$options = array(), Request $request = NULL, BubbleableMetadata $bubbleable_metadata = NULL) {
     // Change module-generated links from /cart to /basket.
     if ($path === '/cart' || $path === '/cart/my') {
-      $path = 'basket';
+      $path = '/basket';
     }
     return $path;
   }
