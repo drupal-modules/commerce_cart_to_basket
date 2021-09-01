@@ -2,6 +2,6 @@ name: Commerce Cart to Basket
 type: module
 description: 'Changes shopping "cart" to "basket", including page URLs.'
 package: Commerce (Contrib)
-core: 8.x
+core_version_requirement: ^8 || ^9
 dependencies:
   - commerce:commerce_cart

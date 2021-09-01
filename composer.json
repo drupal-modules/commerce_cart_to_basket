@@ -1,0 +1,19 @@
+{
+    "name": "drupal/commerce_cart_to_basket",
+    "type": "drupal-module",
+    "description": "Provides Localisation, Path Processing and routes to rename 'cart' to 'basket' everywhere.",
+    "keywords": [
+        "Drupal"
+    ],
+    "license": "GPL-2.0+",
+    "homepage": "https://www.drupal.org/project/commerce_cart_to_basket",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/commerce_cart_to_basket",
+        "source": "https://git.drupalcode.org/project/commerce_cart_to_basket"
+    },
+    "require": {
+        "drupal/commerce": "*",
+    }
+}
+
