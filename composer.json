@@ -13,7 +13,7 @@
         "source": "https://git.drupalcode.org/project/commerce_cart_to_basket"
     },
     "require": {
-        "drupal/commerce": "*",
+        "drupal/commerce": "*"
     }
 }
 
