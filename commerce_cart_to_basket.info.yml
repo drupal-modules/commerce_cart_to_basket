@@ -1,7 +1,7 @@
-name: Commerce Cart to Basket
+name: 'Commerce Cart to Basket'
 type: module
-description: 'Changes shopping "cart" to "basket", including page URLs.'
-package: Commerce (Contrib)
-core_version_requirement: ^8 || ^9
+description: 'Renames the cart to basket in Drupal Commerce.'
+core_version_requirement: ^10
+package: Commerce
 dependencies:
-  - commerce:commerce_cart
+  - drupal:commerce

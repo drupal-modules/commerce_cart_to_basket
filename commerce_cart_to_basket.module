@@ -1,2 +1,38 @@
 <?php
 
+/**
+ * @file
+ * Renames the cart to basket in Drupal Commerce.
+ */
+
+/**
+ * Implements hook_help().
+ */
+function commerce_cart_to_basket_help($route_name, $route_match) {
+  switch ($route_name) {
+    case 'help.page.commerce_cart_to_basket':
+      return '<p>' . t('Renames the cart to basket in Drupal Commerce.') . '</p>';
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for block templates.
+ */
+function commerce_cart_to_basket_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  if ($variables['elements']['#id'] === 'commerce_cart') {
+    $suggestions[] = 'block__commerce_basket';
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function commerce_cart_to_basket_theme($existing, $type, $theme, $path) {
+  return [
+    'commerce_basket' => [
+      'render element' => 'elements',
+      'template' => 'commerce-basket',
+      'path' => \Drupal::service('extension.path.resolver')->getPath('module', 'commerce_cart_to_basket') . '/templates',
+    ],
+  ];
+}
