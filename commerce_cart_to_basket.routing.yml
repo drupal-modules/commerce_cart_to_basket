@@ -2,6 +2,6 @@ commerce_cart_to_basket.page:
   path: '/basket'
   defaults:
     _controller: '\Drupal\commerce_cart\Controller\CartController::cartPage'
-    _title: 'Shopping basket'
+    _title: 'Basket'
   requirements:
-    _access: 'TRUE'
+    _permission: 'access content'
